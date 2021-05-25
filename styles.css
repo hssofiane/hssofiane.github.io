@@ -1,0 +1,234 @@
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 2em;
+    line-height: 1.428571429;
+    background-color: #161616;
+}
+.wrapper {
+    margin: 10% auto;
+    width: 80%;
+}
+h1, p, ul {
+    font-family : 'Mouse Memoirs';
+    text-align: center;
+}
+h1 {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 3px 3px 0 #7a81ff, -1px -1px 0 #7a81ff, 1px -1px 0 #7a81ff, -1px 1px 0 #7a81ff, 1px 1px 0 #7a81ff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+p {
+    font-size: 2em;
+    margin: 0;
+    line-height: 1;
+    color: #7a81ff;
+    text-shadow: 1px 1px 2px #000, 0 0 100px #666;
+    margin-top: -10px;
+}
+
+a {
+    color: #333;
+    font-weight: normal;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 1px #999;
+    text-decoration: none;
+}
+a:hover {
+    color: #333;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #ccc;
+}
+ul {
+    position: relative;
+    border-radius: 20px;
+    padding: 10px 0;
+    box-shadow: 0 0 100px #555;
+    /*width: 80%;*/
+    margin: 40px auto;
+}
+.list-inline > li {
+    padding: 0 10px;
+}
+ul li {
+    vertical-align: middle;
+}
+.sofiane {
+    color: #fff;
+    font-size: 1.9em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    vertical-align: middle;
+    text-shadow : 1px 1px 1px #000;
+    color : white;
+    line-height: 1.5;
+    left: auto;
+}
+
+.sofiane:hover {
+    text-shadow: 3px 3px 0 #7a81ff, -1px -1px 0 #7a81ff, 1px -1px 0 #7a81ff, -1px 1px 0 #7a81ff, 1px 1px 0 #7a81ff;
+}
+.img {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 400px;
+    background-color: #161616;
+    background-image: url(https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Sunglasses&hairColor=Brown&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=BlazerSweater&eyeType=Default&eyebrowType=Default&mouthType=Twinkle&skinColor=Light?size=250);
+    background-position: center center;
+    box-shadow: 0 0 50px #999;
+    background-size: 100%;
+    position: relative;
+}
+/* mediaqueries */
+@media all and (min-width: 530px) {
+    body {
+        font-size: 1.5em;
+    }
+    h1 {
+        font-size: 6em;
+    }
+    .wrapper {
+        width: 500px;
+    }
+    .img {
+        width: 200px;
+        height: 200px;
+    }
+    .sofiane {
+        position: absolute;
+        left: -5%;
+        top: -20px;
+        font-size: 2.2em;
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    .list-inline > li {
+        padding: 0 5px;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .img {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* animations */
+    .word {
+        -webkit-transition: all 1s ease-in-out;
+        position: relative;
+    }
+    .word1 {
+        left: -1000px;
+    }
+    .word2 {
+        left: 1000px;
+    }
+    /*.steady*/ .word1,
+    /*.steady*/ .word2 {
+        left: 0;
+    }
+
+    p {
+        position: relative;
+        bottom: -500px;
+        -webkit-transition: all 1s ease-in-out;
+    }
+    /*.steady*/ p {
+        bottom: 0;
+    }
+
+    .img {
+        top: -1000px;
+        -webkit-transform: scale(0);
+        -webkit-transition: all 1s ease-in-out;
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+    }
+    /*.steady*/ .img {
+        top: 0;
+        -webkit-transform: scale(1);
+    }
+
+    ul {
+        bottom: -100px;
+        -webkit-transform: scale(0);
+    }
+    /*.go*/ ul {
+        bottom: 0;
+        -webkit-transform: scale(1);
+        -webkit-transition: all 1s ease-in-out;
+    }
+}
+
+@media all and (min-width: 768px) and (min-height: 500px) {
+    .wrapper {
+        border-radius: 100%;
+        width: 500px;
+        margin: 0;
+        height: 600px;    
+        position: absolute;
+        top: 50%;
+        margin-top: -300px;
+        left: 50%;
+        margin-left: -250px;
+    }
+    .img {
+        box-shadow: none;
+        border: 1px solid #fff;
+    }
+    ul {
+        margin: 60px auto 0;
+    }
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-inline > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.list-inline > li.sofiane {
+    display: block;
+}
+
+.lost {
+    position: absolute;
+    background-image: url(binding_dark.png);
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 20% 0;
+    overflow: hidden;
+    text-shadow: none;
+}
+
+.lost a {
+    text-decoration: underline;
+}
